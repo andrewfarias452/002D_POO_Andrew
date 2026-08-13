@@ -1,36 +1,36 @@
 public class Canil {
-
     public static void main(String[] args) {
-        Perro perro1 = new Perro();
-        Perro perro2 = new Perro();
-        Perro perro3 = new Perro();
+        System.out.println("Bienvenido al canil");
 
-        perro1.nombre = "Max";
-        perro1.raza = "Labrador";
-        perro1.edad = 3;
-        perro1.peso = 25.5;
+        Perro perro1 = new Perro();
+        perro1.nombre = "Mailo";
+        perro1.edad = 4;
+        perro1.peso = 27;
+        perro1.raza = "labrador";
         perro1.vacuna = true;
 
-        perro2.nombre = "Bella";
-        perro2.raza = "Golden Retriever";
-        perro2.edad = 2;
-        perro2.peso = 30.0;
-        perro2.vacuna = false;
+        if (perro1.edad > 2) {
+            System.out.println(perro1.nombre + " tiene mas de 2 años, es un perro adulto, tiene: " + perro1.edad + " años");
+        } else {
+            System.out.println(perro1.nombre + " no tiene mas de 2 años, es un cachorro, tiene: " + perro1.edad + " años");
+        }
 
-        perro3.nombre = "Rocky";
-        perro3.raza = "Bulldog";
-        perro3.edad = 4;
-        perro3.peso = 20.0;
-        perro3.vacuna = true;
+        if (perro1.peso > 20) {
+            System.out.println(perro1.nombre + " es un perro guaton, pesa: " + perro1.peso + " kg");
+        } else {
+            System.out.println(perro1.nombre + " es un perro ligero, pesa: " + perro1.peso + " kg");
+        }
+        if (perro1.vacuna) {
+            System.out.println(perro1.nombre + " está vacunado");
+        } else {
+            System.out.println(perro1.nombre + " no está vacunado");
+        }
+        if (perro1.vacuna == true) {
+            System.out.println(perro1.nombre + " está vacunado. Puede ingresar al Canil");
+        } else {
+            System.out.println(perro1.nombre + " no está vacunado. No puede ingresar al Canil");
+        }
 
-        String ladrido1 = perro2.ladrar();
-
-        System.out.println(perro1.nombre + " ingresado al canil");
-        System.out.println(perro2.nombre + " ingresado al canil");
-        System.out.println(ladrido1);
-        System.out.println(perro3.nombre + " ingresado al canil");
-        
-        
-
+        System.out.println("Gracias por visitar nuestro canil");
     }
 }
